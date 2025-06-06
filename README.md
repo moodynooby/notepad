@@ -1,5 +1,4 @@
-Notepad
-========
+# Notepad
 
 [![Notepad Cover Image](/art/cover.png)](https://notepad.js.org/)
 
@@ -9,22 +8,22 @@ This is an offline-capable [Notepad](https://notepad.js.org/) which uses the [Se
 
 ## Notable features
 
-  - Lets you **write notes in plain text** which are autosaved [locally](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
-  - [Installable](https://www.amitmerchant.com/adding-custom-install-button-in-progressive-web-apps/) on supported browsers for offline usage.
-  - **"Add To Home Screen"** feature on Android supported devices to launch the app from home screen.
-  - Editor padding.
-  - Font settings.
-  - Supports **monospaced** and **dyslexic fonts**.
-  - Word and character count.
-  - Minimal UI.
-  - Keyboard shortcuts for common actions.
-  - Dark mode.
-  - Writing timer.
-  - Focus mode (on desktop).
-  - Optimal line length for better reading experience.
-  - [Floating window](https://www.amitmerchant.com/implementing-interactive-floating-windows-using-picture-in-picture-api/) to effectively take notes on top of other apps (in [supported browsers](https://developer.mozilla.org/en-US/docs/Web/API/Document_Picture-in-Picture_API))
-  - Download notes as **plain text**, **HTML**, or **PDF**.
-  - Ability to play ambient noise—**coffee shop**, **rain**, **fireside**, etc.—to help you focus.
+- Lets you **write notes in plain text** which are autosaved [locally](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
+- [Installable](https://www.amitmerchant.com/adding-custom-install-button-in-progressive-web-apps/) on supported browsers for offline usage.
+- **"Add To Home Screen"** feature on Android supported devices to launch the app from home screen.
+- Editor padding.
+- Font settings.
+- Supports **monospaced** and **dyslexic fonts**.
+- Word and character count.
+- Minimal UI.
+- Keyboard shortcuts for common actions.
+- Dark mode.
+- Writing timer.
+- Focus mode (on desktop).
+- Optimal line length for better reading experience.
+- [Floating window](https://www.amitmerchant.com/implementing-interactive-floating-windows-using-picture-in-picture-api/) to effectively take notes on top of other apps (in [supported browsers](https://developer.mozilla.org/en-US/docs/Web/API/Document_Picture-in-Picture_API))
+- Download notes as **plain text**, **HTML**, or **PDF**.
+- Ability to play ambient noise—**coffee shop**, **rain**, **fireside**, etc.—to help you focus.
 
 ## Mini tools
 
@@ -42,13 +41,6 @@ I recently added a bunch of tools that I thought might go along with the regular
 - [Deep Breath](https://notepad.js.org/deep-breath/)
 - [Drawingpad (Beta)](https://notepad.js.org/drawingpad/)
 - [Tasks](https://notepad.js.org/tasks/)
-
-
-## Donate
-
-Like this app? If so, consider donating a small amount. It would help me maintaining this project further.
-
-You can support the development via [Buy Me a Coffee](https://buymeacoffee.com/amitmerchant).
 
 ## Feedback
 
