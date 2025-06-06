@@ -1,7 +1,7 @@
 {
-  "short_name": "Notepad",
-  "name": "Notepad",
-  "description": "An offline-capable, quick, and distraction-free Notepad",
+  "short_name": "Todo.txt",
+  "name": "Todo.txt",
+  "description": "An offline-capable, quick, and distraction-free Todo App",
   "display": "standalone",
   "icons": [
     {
@@ -25,36 +25,13 @@
       "type": "image/png"
     }
   ],
-  "screenshots": [
-    {
-      "src": "img/screenshot1.png",
-      "type": "image/png",
-      "sizes": "540x720"
-    },
-    {
-      "src": "img/screenshot2.png",
-      "type": "image/png",
-      "sizes": "540x720"
-    },
-    {
-      "src": "img/screenshot-desktop-dark.png",
-      "type": "image/png",
-      "form_factor": "wide",
-      "sizes": "2460x1674"
-    },
-    {
-      "src": "img/screenshot-desktop-light.png",
-      "type": "image/png",
-      "form_factor": "wide",
-      "sizes": "2460x1674"
-    }
-  ],
+
   "start_url": "index.html",
   "theme_color": "#3F51B5",
   "background_color": "#EEEEEE",
   "url_handlers": [
     {
-      "origin": "https://notepad.js.org"
+      "origin": "/"
     }
   ],
   "display_override": ["minimal-ui"]
