@@ -646,7 +646,7 @@ a {
   line-height: 20px;
   align-items: center;
   overflow: auto;
-  width: min-content;
+  width: 100%;
 }
 
 .brand-container {
@@ -1317,8 +1317,6 @@ a {
 }
 
 @media print {
-  .dark .affiliate-popup,
-  .affiliate-popup,
   .word-count-container {
     display: none !important;
   }
