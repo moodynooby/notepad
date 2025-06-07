@@ -4,17 +4,16 @@
   <title>Todo.txt</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#4d4d4d">
+  <meta name="theme-color" content="#ccff00">
   <meta name="description"
     content="An offline capable todo.txt powered by ServiceWorker. It's quick, distraction-free, dark mode enabled, mobile compatible(Android, iOS) and minimalist in nature.">
   <meta name="keywords" content="note,offline,mobile,web,notepad,android,ios,desktop" />
   <meta name="application-name" content="Notepad" />
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="/img/todotxt_ico.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="img/notepad-apple-icon.png">
-  <link rel="mask-icon" href="img/icon-mask.svg" color="black">
+  <link rel="apple-touch-icon" href="/img/icon512_maskable.png">
 </head>
 
 <body>
@@ -22,15 +21,7 @@
     <div class="container">
       <div class="navbar-header">
         <span>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-            aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </span>
-        <span><a class="navbar-brand app-heading" href="#">Todo.txt</a></span>
+          <a class="navbar-brand app-heading" href="#">Todo.txt</a></span>
         <span class="icon-container">
           <span><a class="download-icon" href="/voice-notes/">
               <img src="img/navbar/mic_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg">
@@ -456,7 +447,7 @@
 
     document.addEventListener("visibilitychange", () => {
       const hidden = document.hidden
-      favicon.setAttribute("href", `/favicon${hidden ? "-hidden" : ""}.ico`)
+      favicon.setAttribute("href", `/img/todotxt_ico${hidden ? "-hidden" : ""}.png`)
     })
   </script>
 
