@@ -14,6 +14,19 @@
 	<link rel="icon" href="/img/todotxt_ico.png">
 	<link rel="manifest" href="manifest.json">
 	<link rel="apple-touch-icon" href="/img/icon512_maskable.png">
+	<link rel="stylesheet" href="/css/vn.css">
+	<script src="/js/libraries/lame.min.js"></script>
+	<script src="/js/libraries/bootstrap.bundle.min.js"></script>
+	<script src="/js/recorder.js"></script>
+	<script src="/js/libraries/jquery.min.js"></script>
+	<script src="/js/libraries/bootstrap.min.js"></script>
+	<script src="/js/libraries/sweetalert2.all.min.js"></script>
+	<script src="/js/libraries/jspdf.umd.min.js"></script>
+	<script src="/js/libraries/docx.min.js"></script>
+	<script src="/js/utils.js"></script>
+	<script src="/js/selector.js"></script>
+	<script src="/js/app.js"></script>
+	<script src="/js/timer.js"></script>
 </head>
 
 <body>
@@ -22,15 +35,12 @@
 		<span>
 			<a class="navbar-brand app-heading" href="#">Todo.txt</a>
 		</span>
-		<span><a class="download-icon" href="/voice-notes/">
+		<span><a class="download-icon" onclick="showShit(recorderContainer)">
 				<img src="img/navbar/mic_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg">
 			</a></span>
 		<span><a class="download-icon" href="/kanban/">
 				<img src="img/navbar/view_kanban_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Kanban" /></a>
 		</span>
-		<span><a class="download-icon" href="/case-converter/">
-				<img src="img/navbar/match_case_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Case Converter" /></a>
-			</a></span>
 		<span><a class="download-icon" href="/drawingpad/">
 				<img src="/img/navbar/design_services_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"> </a></span>
 		<span>
@@ -59,8 +69,7 @@
 		<span title="Preferences [Ctrl/Cmd + ,]">
 			<a href="#preferences" data-toggle="modal" data-target="#preferencesModal" id="preferences"
 				class="preference-icon">
-				<img src="img/navbar/settings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Preferences"
-					id="Preferences" />
+				<img src="img/navbar/settings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Preferences" />
 			</a>
 		</span>
 		<span title="Play Writing Timer" id="timerContainer">
@@ -102,8 +111,41 @@
 
 		<div class="overlay"></div>
 	</nav>
+	<div class="recorder-container mt-5 pt-4" style="display: none;" id="recorderContainer">
+		<h1>Voice Notes</h1>
+		<div class="recorder-controls">
+			<button id="recordButton" class="btn record-btn">
+				<img src="../img/navbar/mic_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+					class=" bi-mic-fill record-icon">
+				<img src="../img/navbar/stop_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg "
+					class=" bi-stop-fill stop-icon">
+
+				<span class="button-text">Start recording</span>
+			</button>
+		</div>
+		<div class="recording-status text-center">
+			<div class="recording-time">
+				<span class="recording-dot"></span>
+				<span id="recordingTime">00:00</span>
+			</div>
+		</div>
+		<div id="recordings" class="recordings-list">
+			<!-- Recorded audio items will be added here -->
+			<div id="emptyState" class="empty-state">
+				<img src="../img/navbar/mic_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+					class=" bi-mic-fill record-icon">
+
+				<p>Start recording voice notes</p>
+			</div>
+		</div>
+		<div id="processingLoader" class="processing-loader hidden">
+			<div class="spinner"></div>
+			<div class="processing-text">Processing voice note...</div>
+		</div>
+	</div>
 
 	<div id="mainContainer">
+
 		<div class="container" id="textareaContainer">
 			<div class="starter-template">
 				<textarea id="note"
@@ -420,7 +462,16 @@
 	</div>
 
 	<div id="toast"></div>
-
+	<script>
+		function showShit(data) {
+			if (data.style.display === "none") {
+				data.style.display = "block";
+			}
+			else {
+				data.style.display = "none";
+			}
+		}
+	</script>
 
 	<script>
 		if (localStorage.getItem('mode')) {
@@ -448,16 +499,6 @@
 			favicon.setAttribute("href", `/img/todotxt_ico${hidden ? "-hidden" : ""}.png`)
 		})
 	</script>
-
-	<script src="js/libraries/jquery.min.js"></script>
-	<script src="js/libraries/bootstrap.min.js"></script>
-	<script src="js/libraries/sweetalert2.all.min.js"></script>
-	<script src="js/libraries/jspdf.umd.min.js"></script>
-	<script src="js/libraries/docx.min.js"></script>
-	<script src="js/utils.js"></script>
-	<script src="js/selector.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/timer.js"></script>
 </body>
 
 </html>

@@ -24,7 +24,7 @@ function showToast(message) {
     let toast = document.getElementById('toast');
     toast.className = 'show';
     toast.innerHTML = message;
-    
+
     setTimeout(function () {
         toast.className = toast.className.replace('show', '');
     }, 2000);
@@ -52,7 +52,7 @@ function debounce(func, wait, immediate) {
 }
 
 function saveTextAsFile(textToWrite, fileNameToSaveAs) {
-    let textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+    let textFileAsBlob = new Blob([textToWrite], {type: 'text/plain'});
     let downloadLink = document.createElement('a');
     downloadLink.download = fileNameToSaveAs;
     downloadLink.innerHTML = 'Download File';
@@ -149,7 +149,7 @@ function calculateCharactersAndWords(str) {
     const characterString = characterCount > 1 ? 'characters' : 'character';
     const wordString = wordCount > 1 ? 'words' : 'word';
     const wordCountText = `${characterCount} ${characterString}, ${wordCount} ${wordString}`;
-    
+
     return wordCountText;
 }
 
@@ -161,28 +161,9 @@ function copyNotesToClipboard(note) {
     });
 }
 
-function toggleTheme({
-    lightmodeText, 
-    darkmodeText, 
-    lightMetaColor, 
-    darkMetaColor, 
-    metaThemeColor
-}) {
-    get(document.body).toggleClass('dark');
-    let bodyClass = get(document.body).attr('class');
-
-    if (bodyClass === 'dark') {
-        enableDarkMode(lightmodeText, darkMetaColor, metaThemeColor)
-    } else {
-        enableLightMode(darkmodeText, lightMetaColor, metaThemeColor)
-    }
-
-    setState('isUserPreferredTheme', 'true');
-}
-
 function deleteNotes() {
-    const { notepad } = selector();
-    
+    const {notepad} = selector();
+
     Swal.fire({
         title: 'Want to delete notes?',
         text: "You won't be able to revert this!",
@@ -223,7 +204,7 @@ function toggleFocusMode(notepad) {
     }
 
     const textArea = document.getElementById('note');
-    
+
     if (!textArea.style.borderRight) {
         textArea.style.borderRight = 'none';
         textArea.style.borderLeft = 'none';
@@ -257,15 +238,15 @@ function exportNotesAsPDF(textToWrite, fileNameToSaveAs) {
     const marginTop = 10;
 
     // Width of text area
-    const maxWidth = 180; 
-    
+    const maxWidth = 180;
+
     const lineHeight = 10;
 
     // Height of a single page
-    const pageHeight = pdf.internal.pageSize.height; 
+    const pageHeight = pdf.internal.pageSize.height;
 
     // Initial Y position for text
-    let yPosition = marginTop; 
+    let yPosition = marginTop;
 
     // Split content into lines that fit within maxWidth
     const lines = pdf.splitTextToSize(textToWrite, maxWidth);
@@ -278,7 +259,7 @@ function exportNotesAsPDF(textToWrite, fileNameToSaveAs) {
         pdf.text(line, marginLeft, yPosition);
         yPosition += lineHeight;
     });
-    
+
     pdf.save(fileNameToSaveAs);
 }
 
@@ -314,8 +295,8 @@ function shareNotes(textToShare) {
             text: textToShare,
             url: 'https://notepad.js.org',
         })
-        .then( () => console.log("Successful share"))
-        .catch(e => console.log("Error sharing:", e))
+            .then(() => console.log("Successful share"))
+            .catch(e => console.log("Error sharing:", e))
     }
 }
 
@@ -326,8 +307,8 @@ function downloadHTML(textToWrite, fileNameToSaveAs) {
             <pre style="white-space: pre-wrap; word-wrap: break-word;">${textToWrite}</pre>
         </body>
     </html>`;
-    
-    const blob = new Blob([htmlContent], { type: "text/html" });
+
+    const blob = new Blob([htmlContent], {type: "text/html"});
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = fileNameToSaveAs;

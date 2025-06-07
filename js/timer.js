@@ -1,10 +1,10 @@
 // Timer configuration
 const timerConfig = {
     periods: [
-        { value: 15, label: '15 minutes' },
-        { value: 30, label: '30 minutes' },
-        { value: 45, label: '45 minutes' },
-        { value: 60, label: '60 minutes' }
+        {value: 15, label: '15 minutes'},
+        {value: 30, label: '30 minutes'},
+        {value: 45, label: '45 minutes'},
+        {value: 60, label: '60 minutes'}
     ],
     timer: null,
     isRunning: false,
@@ -53,7 +53,7 @@ function startTimer(minutes) {
     timerConfig.remainingTime = minutes * 60;
     timerConfig.isRunning = true;
     timerConfig.timer = setInterval(updateTimer, 1000);
-    
+
     // Show timer pill
     $('.timer-pill').show();
     updateTimerDisplay();
@@ -80,7 +80,7 @@ function updateTimer() {
         stopTimer();
         return;
     }
-    
+
     timerConfig.remainingTime--;
     updateTimerDisplay();
 }
@@ -93,12 +93,12 @@ function updateTimerDisplay() {
 }
 
 // Event listeners
-$(document).on('click', '.timer-option', function() {
+$(document).on('click', '.timer-option', function () {
     const minutes = $(this).data('minutes');
     startTimer(minutes);
     $('#timerModal').modal('hide');
 });
 
-$(document).on('click', '#stopTimer', function() {
+$(document).on('click', '#stopTimer', function () {
     stopTimer();
 });

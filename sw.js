@@ -29,7 +29,6 @@ let CACHE_FILES = [
   "img/navbar/hourglass_top_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
   "img/navbar/keyboard_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
   "img/navbar/light-theme.svg",
-  "img/navbar/match_case_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
   "img/navbar/mic_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
   "img/navbar/open_in_full_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",
   "img/navbar/pip_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg",

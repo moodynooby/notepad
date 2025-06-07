@@ -1,9 +1,11 @@
 {
   "web_apps": [
     {
-      "manifest": "https://notepad.js.org/manifest.json",
+      "manifest": "https://https://todotxt.netlify.app/manifest.json",
       "details": {
-        "paths": ["/*"]
+        "paths": [
+          "/*"
+        ]
       }
     }
   ]
